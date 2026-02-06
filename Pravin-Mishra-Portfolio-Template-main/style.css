@@ -1119,13 +1119,13 @@ section {
 /* Bottom */
 .footer-bottom {
   border-top: 1px solid #222;
-  padding-top: 20px;
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
   color: #888;
-  font-size: 14px;
+  font-size: 24px;
 }
 
 .footer-bottom span {

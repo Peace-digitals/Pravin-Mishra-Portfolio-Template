@@ -1,0 +1,24 @@
+<div class="footer-bottom">
+  <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
+  <p>Crafted with <span>cloud</span> excellence by Ifunanya-Peace-Okeke</p>
+  <p><strong>Deployed by:</strong> DMI Cohort 2 | Ifunanya Peace Okeke | Group 3 | Week 04 | <span id="deployDate"></span></p>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const today = new Date();
+
+    // Update copyright year
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) yearSpan.textContent = today.getFullYear();
+
+    // Update deployment date in DD-MM-YYYY format
+    const deploySpan = document.getElementById("deployDate");
+    if (deploySpan) {
+      const day = String(today.getDate()).padStart(2, '0');
+      const month = String(today.getMonth() + 1).padStart(2, '0');
+      const year = today.getFullYear();
+      deploySpan.textContent = `${day}-${month}-${year}`;
+    }
+  });
+</script>

@@ -599,33 +599,33 @@
       </div>git 
 
       <!-- Bottom -->
-      <<div class="footer-bottom">
+      <div class="footer-bottom">
   <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
-  <p>Crafted with <span>cloud</span> excellence by Ifunanya-Peace-Okeke</p>
-  <p><strong>Deployed by:</strong> DMI Cohort 2 | Ifunanya Peace Okeke | Group 3 | Week 04 | <span id="deployDate"></span></p>
+  <p>Crafted with <span class="highlight">cloud</span> excellence by Ifunanya-Peace-Okeke</p>
+  <p class="deploy-line">
+    <strong>Deployed by:</strong> DMI Cohort 2 | Ifunanya Peace Okeke | Group 3 | Week 04 |
+    <span id="deployDate"></span>
+  </p>
 </div>
 
 <script>
-  // Wait until the page is fully loaded
-  document.addEventListener("DOMContentLoaded", function() {
-    const today = new Date();
+document.addEventListener("DOMContentLoaded", function () {
+  const today = new Date();
 
-    // Update copyright year
-    const yearSpan = document.getElementById("year");
-    if (yearSpan) yearSpan.textContent = today.getFullYear();
+  // Auto year
+  document.getElementById("year").textContent = today.getFullYear();
 
-    // Update deployment date in DD-MM-YYYY format
-    const deploySpan = document.getElementById("deployDate");
-    if (deploySpan) {
-      const day = String(today.getDate()).padStart(2, '0');
-      const month = String(today.getMonth() + 1).padStart(2, '0');
-      const year = today.getFullYear();
-      deploySpan.textContent = `${day}-${month}-${year}`;
-    }
-  });
+  // Auto deploy date (DD-MM-YYYY)
+  const day = String(today.getDate()).padStart(2, "0");
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const year = today.getFullYear();
+
+  document.getElementById("deployDate").textContent = `${day}-${month}-${year}`;
+});
 </script>
 
-
+</body>
+</html>
 
     </div>
   </footer>
